@@ -1,0 +1,31 @@
+date,amount,category,description
+01-07-2024,600.0,Expense,Groceries  
+02-07-2024,300.0,Expense,Electricity Bill  
+03-07-2024,4500.0,Income,Freelance Project  
+04-07-2024,180.0,Expense,Cinema  
+05-07-2024,250.0,Expense,Petrol  
+06-07-2024,1200.0,Income,Scholarship  
+07-07-2024,90.0,Expense,Tea & Snacks  
+08-07-2024,650.0,Expense,Internet Bill  
+09-07-2024,3200.0,Income,Salary  
+10-07-2024,150.0,Expense,Book Purchase  
+11-07-2024,220.0,Expense,Mobile Recharge  
+12-07-2024,500.0,Income,Cashback  
+13-07-2024,100.0,Expense,Cab Fare  
+14-07-2024,380.0,Expense,Lunch Out  
+15-07-2024,500.0,Expense,Groceries  
+16-07-2024,2700.0,Income,Consulting  
+17-07-2024,150.0,Expense,Internet Bill  
+18-07-2024,2000.0,Income,Freelancing  
+19-07-2024,3000.0,Income,Salary  
+20-07-2024,100.0,Expense,Snacks  
+21-07-2024,800.0,Expense,Electricity Bill  
+22-07-2024,2500.0,Income,Side Project  
+23-07-2024,120.0,Expense,Mobile Recharge  
+24-07-2024,75.0,Expense,Bus Fare  
+25-07-2024,3100.0,Income,Stipend  
+26-07-2024,400.0,Expense,Online Course  
+27-07-2024,90.0,Expense,Ice Cream  
+28-07-2024,1000.0,Income,Bonus  
+29-07-2024,180.0,Expense,Milk & Vegetables  
+30-07-2024,150.0,Expense,Laundry

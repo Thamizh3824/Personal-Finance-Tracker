@@ -5,6 +5,7 @@ from data_entry import get_date, get_amount, get_category, get_description
 import matplotlib.pyplot as plt
 
 from finance_tracker.loader import load_csv
+from finance_tracker.cleaner import clean_transactions
 
 class CSV:
     CSV_FILE = "finance_data.csv"
@@ -35,7 +36,8 @@ class CSV:
     @classmethod
     def get_transactions(cls,start_date,end_date):
         df = load_csv(cls.CSV_FILE)
-        df["date"] = pd.to_datetime(df["date"], format=CSV.FORMAT)
+        #df["date"] = pd.to_datetime(df["date"], format=CSV.FORMAT)
+        df = clean_transactions(df)
         start_date =datetime.strptime(start_date, CSV.FORMAT)
         end_date = datetime.strptime(end_date, CSV.FORMAT)
         

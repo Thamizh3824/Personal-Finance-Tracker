@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from finance_tracker.loader import load_csv
 from finance_tracker.cleaner import clean_transactions
 from finance_tracker.analyzer import total_income, total_expense, net_savings
+from finance_tracker.reporter import print_transactions, print_summary
 
 class CSV:
     CSV_FILE = "finance_data.csv"
@@ -48,17 +49,18 @@ class CSV:
         if filtered_df.empty:
             print("No transactions found in the given date range.")
         else:
-            print(f"Transactions from {start_date.strftime(CSV.FORMAT)} to {end_date.strftime(CSV.FORMAT)}")
-            print(filtered_df.to_string(index=False, formatters={"date": lambda x: x.strftime(CSV.FORMAT)}))
-            
             income = total_income(filtered_df)
             expense = total_expense(filtered_df)
             savings = net_savings(filtered_df)
             
-            print("\nSummary:")
-            print(f"Total Income: ${income:.2f}")
-            print(f"Total Expense: ${expense:.2f}")
-            print(f"Net Savings: ${savings:.2f}")
+            print_transactions(
+                filtered_df,
+                start_date.strftime(CSV.FORMAT),
+                end_date.strftime(CSV.FORMAT),
+                CSV.FORMAT,
+            )
+
+            print_summary(income, expense, savings)
 
         return filtered_df   
 

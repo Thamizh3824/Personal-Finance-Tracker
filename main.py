@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 from finance_tracker.loader import load_csv
 from finance_tracker.cleaner import clean_transactions
+from finance_tracker.analyzer import total_income, total_expense, net_savings
 
 class CSV:
     CSV_FILE = "finance_data.csv"
@@ -50,12 +51,15 @@ class CSV:
             print(f"Transactions from {start_date.strftime(CSV.FORMAT)} to {end_date.strftime(CSV.FORMAT)}")
             print(filtered_df.to_string(index=False, formatters={"date": lambda x: x.strftime(CSV.FORMAT)}))
             
-            total_income = filtered_df[filtered_df["category"]== "Income"]["amount"].sum()
-            total_expense = filtered_df[filtered_df["category"]== "Expense"]["amount"].sum()
+            income = total_income(filtered_df)
+            expense = total_expense(filtered_df)
+            savings = net_savings(filtered_df)
+            
             print("\nSummary:")
-            print(f"Total Income: ${total_income:.2f}")
-            print(f"Total Expense: ${total_expense:.2f}")
-            print(f"Net Savings: ${total_income - total_expense:.2f}")
+            print(f"Total Income: ${income:.2f}")
+            print(f"Total Expense: ${expense:.2f}")
+            print(f"Net Savings: ${savings:.2f}")
+
         return filtered_df   
 
 def add():

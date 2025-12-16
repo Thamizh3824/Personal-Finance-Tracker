@@ -4,7 +4,7 @@ from datetime import datetime
 from data_entry import get_date, get_amount, get_category, get_description
 import matplotlib.pyplot as plt
 
-from Finance_tracker.loader import load_csv
+from finance_tracker.loader import load_csv
 
 class CSV:
     CSV_FILE = "finance_data.csv"

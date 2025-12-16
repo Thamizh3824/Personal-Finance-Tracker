@@ -78,7 +78,10 @@ def plot_transactions(df):
     plt.title("Income and Expense Over Time")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    #plt.show()
+    plt.savefig("finance_plot.png")
+    print("Plot saved as finance_plot.png")
+
     
     
 def main():
@@ -105,3 +108,4 @@ def main():
 if __name__ == "__main__":
 
     main()                       
+

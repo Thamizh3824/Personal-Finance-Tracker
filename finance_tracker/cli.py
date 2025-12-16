@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from data_entry import (
+from finance_tracker.input_utils import (
     get_date,
     get_amount,
     get_category,

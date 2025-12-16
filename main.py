@@ -3,6 +3,9 @@ import csv
 from datetime import datetime
 from data_entry import get_date, get_amount, get_category, get_description
 import matplotlib.pyplot as plt
+
+from Finance_tracker.loader import load_csv
+
 class CSV:
     CSV_FILE = "finance_data.csv"
     COLUMNS = ["date", "amount", "category", "description"]
@@ -31,7 +34,7 @@ class CSV:
         
     @classmethod
     def get_transactions(cls,start_date,end_date):
-        df = pd.read_csv(cls.CSV_FILE)
+        df = load_csv(cls.CSV_FILE)
         df["date"] = pd.to_datetime(df["date"], format=CSV.FORMAT)
         start_date =datetime.strptime(start_date, CSV.FORMAT)
         end_date = datetime.strptime(end_date, CSV.FORMAT)
@@ -100,4 +103,5 @@ def main():
             print("Invalid choice. Enter a number between 1 and 3.")
             
 if __name__ == "__main__":
+
     main()                       

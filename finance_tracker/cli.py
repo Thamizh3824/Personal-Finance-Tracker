@@ -11,9 +11,7 @@ from finance_tracker.loader import load_csv
 from finance_tracker.cleaner import clean_transactions
 from finance_tracker.analyzer import total_income, total_expense, net_savings
 from finance_tracker.reporter import print_transactions, print_summary
-
-from main import CSV, plot_transactions
-
+from finance_tracker.storage import CSV, plot_transactions
 
 def run_cli():
     while True:

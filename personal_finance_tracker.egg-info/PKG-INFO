@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: personal-finance-tracker
+Version: 0.1.0
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Dynamic: license-file

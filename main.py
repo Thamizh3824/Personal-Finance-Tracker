@@ -8,6 +8,7 @@ from finance_tracker.loader import load_csv
 from finance_tracker.cleaner import clean_transactions
 from finance_tracker.analyzer import total_income, total_expense, net_savings
 from finance_tracker.reporter import print_transactions, print_summary
+from finance_tracker.cli import run_cli
 
 class CSV:
     CSV_FILE = "finance_data.csv"
@@ -115,5 +116,5 @@ def main():
             
 if __name__ == "__main__":
 
-    main()                       
+    run_cli()                       
 
